@@ -1,0 +1,41 @@
+/* global.css */
+
+/* Base styles */
+:root {
+
+  /* Default theme (palette 1) */
+  --color-primary: #f8abbd;
+  --color-secondary: #f6cddd;
+  --color-accent: #d7b0dc;
+  --color-bg: #f5e5e6;
+  --color-text: #222;
+  --color-heading: #111;
+  --color-border: #e6cee6;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Theme 2 */
+.theme-2 {
+  --color-primary: #ffa9b9;
+  --color-secondary: #ffe0de;
+  --color-accent: #83e1e0;
+  --color-bg: #fff2f1;
+  --color-text: #333;
+  --color-heading: #111;
+  --color-border: #ff94a8;
+}
+
+/* Theme 3 */
+.theme-3 {
+  --color-primary: #573067;
+  --color-secondary: #7b589a;
+  --color-accent: #f5aac8;
+  --color-bg: #fae4d7;
+  --color-text: #1a1a1a;
+  --color-heading: #0d0d0d;
+  --color-border: #a485c1;
+}

@@ -1,25 +1,35 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const mongoose = require('mongoose');
-const cors = require('cors');
+const express = require("express");
 
-dotenv.config();
+require("dotenv").config();
 
+const cors = require("cors");
+const connectDB = require("./config/db");
+
+
+// Initialize Express App
 const app = express();
 
-// DB Connection
-mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log("✅ MongoDB Connected"))
-    .catch((err) => console.error("❌ DB Error:", err));
+// Connect to Database
+connectDB();
 
-// middleware
+// Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// test route
-app.get('/api', (req, res) => {
-    res.send('Backend is running...')
-})
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// const authRoutes = require("./routes/auth.route");
+// const caseRoutes = require("./routes/case.route");
+// const taskRoutes = require("./routes/task.route");
+// const adminRoutes = require("./routes/admin.route");
+
+const PORT = process.env.PORT || 4999;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
+// app.use("/api/v1/auth", authRoutes);
+// app.use("/api/v1/case", caseRoutes);
+// app.use("/api/v1/task", taskRoutes);
+// app.use("/api/v1/admin", adminRoutes);

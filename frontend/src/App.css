@@ -1,42 +1,42 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Header.css */
+.header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* SideNav.css */
+.sidenav {
+    position: fixed;
+    right: 1.5rem;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    z-index: 40;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.sidenav a {
+    font-size: 1.3rem;
+    color: #6b7280;
+    /* gray */
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.sidenav a:hover {
+    color: #2563eb;
+    /* blue */
+    transform: scale(1.1);
 }
