@@ -5,7 +5,7 @@ import { useTheme } from "../../context/ThemeContext";
 import "./../../styles/theme.css";
 
 const themes = [
-    { id: "default", label: "Default", color: "var(--clr-accent-500)" },
+    { id: "default", label: "Default", color: "#eb6e9b" },
     { id: "theme-2", label: "Lavender", color: "#7371fc" },
     { id: "theme-3", label: "Coral Peach", color: "#e99184" },
 ];

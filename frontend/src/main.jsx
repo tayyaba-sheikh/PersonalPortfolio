@@ -5,7 +5,6 @@ import './index.css'
 import { BrowserRouter } from "react-router-dom";
 import App from './App.jsx'
 import './styles/global.css'
-import './styles/layout.css'
 import { ThemeProvider } from './context/ThemeContext.jsx';
 
 createRoot(document.getElementById('root')).render(
