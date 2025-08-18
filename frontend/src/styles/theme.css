@@ -21,7 +21,7 @@
     background: white;
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
-    border-right: 10px solid var(--color-primary);
+    border-right: 10px solid var(--clr-brand-500);
     box-shadow: 6px 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 0 20px 20px 0;
     padding: 1rem;
@@ -33,10 +33,10 @@
     position: fixed;
     top: 1rem;
     left: 1rem;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    background: linear-gradient(135deg, var(--clr-accent-600), var(--clr-secondary-500));
     color: white;
     border: none;
     cursor: pointer;

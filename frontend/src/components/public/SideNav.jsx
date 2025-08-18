@@ -12,13 +12,18 @@ const SideNav = () => {
   ];
 
   return (
-    <nav className="sidenav">
-      {sections.map((sec) => (
-        <a key={sec.id} href={`#${sec.id}`} title={sec.label}>
-          {sec.icon}
-        </a>
-      ))}
-    </nav>
+    <div className="sidenav-wrapper" >
+      <nav className="sidenav">
+        {sections.map((sec) => (
+          <div key={sec.id} className="tooltip-wrapper">
+            <span className="tooltip">{sec.label}</span>
+            <a href={`#${sec.id}`} className="icon-btn">
+              {sec.icon}
+            </a>
+          </div>
+        ))}
+      </nav>
+    </div>
   );
 };
 

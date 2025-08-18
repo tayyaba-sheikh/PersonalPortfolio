@@ -10,7 +10,7 @@ const PublicLayout = ({ children }) => {
             <Header />
             <ThemeSwitcher />
             <div className="content-wrapper flex">
-                <main className="flex-1">{children}</main>
+                <main className="flex flex-col">{children}</main>
                 <SideNav />
             </div>
             <Footer />

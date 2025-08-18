@@ -5,9 +5,9 @@ import { useTheme } from "../../context/ThemeContext";
 import "./../../styles/theme.css";
 
 const themes = [
-    { id: "default", label: "Default", color: "var(--color-primary)" },
-    { id: "theme-2", label: "Blush Pink", color: "#83e1e0" },
-    { id: "theme-3", label: "Royal Purple", color: "#573067" },
+    { id: "default", label: "Default", color: "var(--clr-accent-500)" },
+    { id: "theme-2", label: "Lavender", color: "#7371fc" },
+    { id: "theme-3", label: "Coral Peach", color: "#e99184" },
 ];
 
 export const ThemeSwitcher = () => {
@@ -39,11 +39,13 @@ export const ThemeSwitcher = () => {
                 <motion.button
                     initial={{ scale: 0, rotate: -90 }}
                     animate={{ scale: 1, rotate: 0 }}
+                    whileHover={{ scale: 1.08, rotate: 2 }}
+                    whileTap={{ scale: 0.95 }}
                     transition={{ type: "spring", stiffness: 200, damping: 15 }}
                     onClick={() => setOpen(true)}
-                    className="theme-btn flex-center shadow-lg mt-5 ml-3"
+                    className="theme-btn flex-center shadow-lg mt-5 ml-5"
                 >
-                    <FiSettings size={22} />
+                    <FiSettings size={18} />
                 </motion.button>
             )}
 
@@ -71,10 +73,10 @@ export const ThemeSwitcher = () => {
                             className="theme-sidebar"
                         >
                             <div className="flex-between mb-2">
-                                <h2 className="text-lg text-heading">🎨 Choose Theme</h2>
+                                <h2 className="text-lg text-bold-500 heading-color">Choose Theme</h2>
                                 <button
                                     onClick={() => setOpen(false)}
-                                    className="btn-close flex-center no-bg"
+                                    className="btn-close flex-center no-bg heading-color"
                                 >
                                     <FiX size={18} />
                                 </button>
