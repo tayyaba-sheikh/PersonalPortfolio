@@ -9,13 +9,10 @@ import AdminLayout from './layout/AdminLayout.jsx';
 
 
 // Public pages
-import Home from './pages/public/Home.jsx';
-import Works from './pages/public/Works.jsx';
-import Services from './pages/public/Services.jsx';
-import Testimonials from './pages/public/Testimonials.jsx';
-import Pricing from './pages/public/Pricing.jsx';
-import FAQ from './pages/public/FAQ.jsx';
-import Contact from './pages/public/Contact.jsx';
+import Index from './pages/public/Home/Index.jsx';
+import ProjectsDetailList from './pages/public/Works/ProjectsDetailList.jsx';
+import ServicesDetailList from './pages/public/Services/ServicesDetailList.jsx';
+import TestimonialsDetailList from './pages/public/Testimonials/TestimonialsDetailList.jsx';
 
 
 // Admin pages
@@ -35,17 +32,15 @@ function App() {
 
   return (
     <>
+    
       {/* <ToastContainer position="top-right" autoClose={3000} /> */}
       <Routes>
         {/* Public Portfolio */}
         <Route path="/" element={<PublicLayout />}>
-          <Route index element={<Home />} />
-          <Route path="works" element={<Works />} />
-          <Route path="services" element={<Services />} />
-          <Route path="testimonials" element={<Testimonials />} />
-          <Route path="pricing" element={<Pricing />} />
-          <Route path="faq" element={<FAQ />} />
-          <Route path="contact" element={<Contact />} />
+          <Route index element={<Index />} />
+          <Route path="works" element={<ProjectsDetailList />} />
+          <Route path="services" element={<ServicesDetailList />} />
+          <Route path="testimonials" element={<TestimonialsDetailList />} />
         </Route>
         {/* Admin Panel */}
         <Route path="/admin/login" element={<Login />} />

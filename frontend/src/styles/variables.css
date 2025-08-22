@@ -44,10 +44,21 @@
 --clr-surface-hover: #f8f4f8;
 
 /* Semantic States */
---clr-success: #4caf7a;
---clr-warning: #f2c27d;
---clr-error: #e76b82;
---clr-info: #8dc9db;
+  --clr-success-dark: #3a7c5a;
+  --clr-success: #4caf7a;
+  --clr-success-light: #a3d6b8;
+
+  --clr-warning-dark: #d6a25c;
+  --clr-warning: #f2c27d;
+  --clr-warning-light: #f8dcb0;
+
+  --clr-error-dark: #b34f62;
+  --clr-error: #e76b82;
+  --clr-error-light: #f5a1b0;
+
+  --clr-info-dark: #6aa2b4;
+  --clr-info: #8dc9db;
+  --clr-info-light: #c3e2ec;
 }
 
 /* Theme 2 */

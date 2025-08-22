@@ -1,0 +1,40 @@
+/* ===============================
+   CARD COMPONENT
+================================= */
+.card {
+    background: #fff;
+    border: 1px solid var(--clr-border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Sections */
+.card-header,
+.card-content,
+.card-footer {
+    padding: 1rem;
+}
+
+.card-media img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Glassmorphic / Gradient variants */
+.card-glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-gradient {
+    background: linear-gradient(135deg, var(--clr-brand-400), var(--clr-accent-500));
+    color: var(--clr-text-inverse);
+}

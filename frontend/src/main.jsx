@@ -6,12 +6,15 @@ import { BrowserRouter } from "react-router-dom";
 import App from './App.jsx'
 import './styles/global.css'
 import { ThemeProvider } from './context/ThemeContext.jsx';
+import { ModalProvider } from "./context/ModalContext.jsx";
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider>
-        <App />
+        <ModalProvider>
+          <App />
+        </ModalProvider>
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,

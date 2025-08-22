@@ -1,19 +1,21 @@
 import Header from "../components/public/Header";
 import { ThemeSwitcher } from "../components/shared/ThemeSwitcher";
 import SideNav from "../components/public/SideNav";
-import Footer from "../components/public/Footer";
+import { Outlet } from "react-router-dom";
 
 
-const PublicLayout = ({ children }) => {
+const PublicLayout = () => {
     return (
         <div className="app-layout">
             <Header />
             <ThemeSwitcher />
             <div className="content-wrapper flex">
-                <main className="flex flex-col">{children}</main>
+                <main className="flex flex-col">
+                    <Outlet />
+                </main>
                 <SideNav />
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };
