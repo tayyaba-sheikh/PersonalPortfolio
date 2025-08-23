@@ -6,7 +6,7 @@ import Accordion from "../../../components/ui/Accordion"
 // import Modal from "../../../components/ui/Modal"
 // import { useState } from "react"
 import Button from "../../../components/ui/Button"
-import Card, { CardContent, CardFooter, CardHeader, CardMedia } from "../../../components/ui/Card"
+import {Card, CardContent, CardFooter, CardHeader, CardMedia } from "../../../components/ui/Card"
 import { useModal } from "../../../context/ModalContext"
 const faqItems = [
   { title: "What services do you provide?", content: "We provide legal case management, task handling, and client collaboration tools." },
@@ -142,7 +142,7 @@ const Home = () => {
         <div className="cards-example">
           {/* profile card */}
           <Card className="w-100 max-w-300">
-            <CardMedia src="/MyImage.jpg" alt="Profile" />
+            {/* <CardMedia src="/MyImage.jpg" alt="Profile" /> */}
             <CardHeader title="Tayyaba Sheikh" subtitle="Web Developer" />
             <CardContent>
               <p className="text-base text-muted">
