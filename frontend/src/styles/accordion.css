@@ -1,0 +1,77 @@
+/* ===============================
+   ACCORDION STYLES
+================================= */
+/* Accordion Container */
+.accordion {
+    width: 100%;
+    max-width: 700px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Accordion Variants */
+.accordion-primary .accordion-item {
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.accordion-secondary .accordion-item {
+    border-bottom: 1px solid var(--clr-text-muted);
+}
+
+/* Accordion Item */
+.accordion-item {
+    background: #fff;
+    transition: background 0.3s ease;
+}
+
+.accordion-item:hover {
+    background: var(--clr-neutral-400);
+}
+
+/* Accordion Header */
+.accordion-header {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.accordion-header.active {
+    color: var(--clr-accent-600);
+}
+
+/* Accordion Icon */
+.accordion-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* Accordion Content */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--clr-text-muted);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content.open {
+    max-height: 300px;
+    /* Enough height for content */
+    padding: 1rem 1.5rem;
+}

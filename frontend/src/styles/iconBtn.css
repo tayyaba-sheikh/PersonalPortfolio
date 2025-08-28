@@ -1,0 +1,46 @@
+/* =============================
+   Icon Button Styling (3D + Hover Effects)
+============================= */
+.icon-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(145deg, var(--clr-accent-600), var(--clr-secondary-500));
+  /* box-shadow: 6px 6px 12px #c5cdd9,
+  -6px -6px 12px #ffffff; */
+  box-shadow: 6px 6px 12px rgba(247, 250, 255, .2);
+  transition: all 0.25s ease-in-out;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn svg {
+  font-size: 20px;
+  color: var(--clr-text-inverse);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* Hover effect */
+.icon-btn:hover {
+  background: var(--clr-text-inverse);
+  box-shadow: 2px 2px 6px #c5cdd9,
+    -2px -2px 6px #ffffff;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.icon-btn:hover svg {
+  transform: scale(1.2) rotate(10deg);
+  color: var(--clr-accent-600);
+}
+
+/* Active (clicked) effect */
+.icon-btn:active {
+  box-shadow: inset 4px 4px 6px #c5cdd9,
+    inset -4px -4px 6px #ffffff;
+  transform: translateY(1px) scale(0.97);
+}

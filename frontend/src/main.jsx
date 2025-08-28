@@ -5,6 +5,20 @@ import './index.css'
 import { BrowserRouter } from "react-router-dom";
 import App from './App.jsx'
 import './styles/global.css'
+import './styles/animations.css'
+import './styles/badge.css'
+import './styles/avatar.css'
+import './styles/accordion.css'
+import './styles/signature.css'
+import './styles/modal.css'
+import './styles/loader.css'
+import './styles/buttons.css'
+import './styles/card.css'
+import './styles/list.css'
+import './styles/table.css'
+import './styles/form.css'
+import './styles/iconBtn.css'
+import './styles/tooltip.css'
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import { ModalProvider } from "./context/ModalContext.jsx";
 

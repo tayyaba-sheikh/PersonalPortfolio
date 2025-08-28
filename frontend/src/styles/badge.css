@@ -1,0 +1,106 @@
+/* ===============================
+   BADGE STYLES
+================================= */
+/* Base Badge */
+.badge {
+    display: inline-block;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+    border: 1px solid transparent;
+}
+
+/* Variants */
+.badge-primary {
+    background: var(--clr-brand-500);
+    color: var(--clr-text-inverse);
+}
+
+.badge-primary-outline {
+    background: var(--clr-text-inverse);
+    color: var(--clr-brand-700);
+    border: 1px solid var(--clr-brand-700);
+}
+
+.badge-secondary {
+    background: var(--clr-secondary-500);
+    color: var(--clr-text-inverse);
+}
+
+.badge-secondary-outline {
+    background: var(--clr-text-inverse);
+    color: var(--clr-secondary-600);
+    border: 1px solid var(--clr-secondary-600);
+}
+
+.badge-success {
+    background: var(--clr-success);
+    color: var(--clr-text-inverse);
+}
+
+.badge-success-outline {
+    background: var(--clr-text-inverse);
+    color: var(--clr-success);
+    border: 1px solid var(--clr-success);
+}
+
+.badge-warning {
+    background: var(--clr-warning);
+    color: black;
+}
+
+.badge-warning-outline {
+    background: var(--clr-text-inverse);
+    color: var(--clr-warning);
+    border: 1px solid var(--clr-warning);
+}
+
+.badge-error {
+    background: var(--clr-error);
+    color: var(--clr-text-inverse);
+}
+
+.badge-error-outline {
+    background: var(--clr-text-inverse);
+    color: var(--clr-error);
+    border: 1px solid var(--clr-error);
+}
+
+.badge-info {
+    background: var(--clr-info-dark);
+    color: var(--clr-text-inverse);
+}
+
+.badge-info-outline {
+    background: var(--clr-text-inverse);
+    color: var(--clr-info-dark);
+    border: 1px solid var(--clr-info-dark);
+}
+
+.badge-dark {
+    background: #343a40;
+    color: white;
+}
+
+/* Sizes */
+.badge-small {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+}
+
+.badge-medium {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.badge-large {
+    font-size: 1rem;
+    padding: 0.35rem 1rem;
+}
+
+/* Shape */
+.badge-rounded {
+    border-radius: 50px;
+}

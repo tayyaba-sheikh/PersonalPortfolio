@@ -1,0 +1,48 @@
+/* =============================
+   Tooltip Styling
+============================= */
+.tooltip-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+/* Tooltip bubble */
+.tooltip {
+    position: absolute;
+    right: 110%;
+    top: 50%;
+    transform: translateY(-50%) scale(0.8);
+    background: var(--clr-accent-600);
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease-in-out;
+    box-shadow: var(--shadow-md);
+
+}
+
+/* Small triangle (arrow) */
+/* .tooltip::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent var(--clr-brand-500) transparent transparent;
+  padding-left: .2rem;
+} */
+
+/* Show tooltip on hover */
+.tooltip-wrapper:hover .tooltip {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}

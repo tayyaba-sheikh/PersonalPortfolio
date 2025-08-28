@@ -6,19 +6,49 @@ import Accordion from "../../../components/ui/Accordion"
 // import Modal from "../../../components/ui/Modal"
 // import { useState } from "react"
 import Button from "../../../components/ui/Button"
-import {Card, CardContent, CardFooter, CardHeader, CardMedia } from "../../../components/ui/Card"
 import { useModal } from "../../../context/ModalContext"
+import SectionWrapper from "../../../components/shared/SectionWrapper"
+import Card from "../../../components/ui/Card"
 const faqItems = [
   { title: "What services do you provide?", content: "We provide legal case management, task handling, and client collaboration tools." },
   { title: "Can I use it on mobile?", content: "Yes, the system is fully responsive and works across all devices." },
   { title: "Is support available?", content: "Yes, we provide 24/7 support through chat and email." },
 ];
+// Dummy project data (later replace with API data)
+const projects = [
+  {
+    id: 1,
+    title: "Portfolio Website",
+    description: "A personal portfolio built with MERN stack and theme switching.",
+    image: "/assets/projects/portfolio.jpg",
+    link: "https://your-portfolio.com",
+  },
+  {
+    id: 2,
+    title: "Task Management App",
+    description: "Full-stack app for managing tasks with role-based access.",
+    image: "/assets/projects/task-app.jpg",
+    link: "https://task-app.com",
+  },
+  {
+    id: 3,
+    title: "E-Commerce Store",
+    description: "A complete MERN e-commerce store with cart & payments.",
+    image: "/assets/projects/ecommerce.jpg",
+    link: "https://ecommerce.com",
+  },
+  {
+    id: 4,
+    title: "Chat Application",
+    description: "Real-time chat app using Socket.io and MongoDB.",
+    image: "/assets/projects/chat-app.jpg",
+    link: "https://chat-app.com",
+  },
+];
 const Home = () => {
-  // const [openConfirm, setOpenConfirm] = useState(false);
-  // const [openSuccess, setOpenSuccess] = useState(false);
-  // const [openError, setOpenError] = useState(false);
-  // const [openForm, setOpenForm] = useState(false);
   const { openModal } = useModal();
+  // Show only top 3 projects
+  const topProjects = projects.slice(0, 3);
   return (
     <>
       <section
@@ -61,60 +91,7 @@ const Home = () => {
           <h2>Frequently Asked Questions</h2>
           <Accordion items={faqItems} variant="primary" />
         </div>
-        {/* <div>
-          <div className="btns-wrapper flex justify-between">
-            <Button size="small" onClick={() => setOpenConfirm(true)}>Open Confirm Modal</Button>
-            <Button size="small" onClick={() => setOpenSuccess(true)}>Open Success Modal</Button>
-            <Button size="small" onClick={() => setOpenError(true)}>Open Error Modal</Button>
-            <Button size="small" onClick={() => setOpenForm(true)}>Open Form Modal</Button>
-          </div>
 
-          <Modal
-            isOpen={openConfirm}
-            onClose={() => setOpenConfirm(false)}
-            type="confirmation"
-            title="Delete Item"
-            onConfirm={() => {
-              alert("Item deleted!");
-              setOpenConfirm(false);
-            }}
-          >
-            Are you sure you want to delete this?
-          </Modal>
-
-          <Modal
-            isOpen={openSuccess}
-            onClose={() => setOpenSuccess(false)}
-            type="success"
-            title="Success"
-            animation="zoom"
-          >
-            Your changes have been saved.
-          </Modal>
-          <Modal
-            isOpen={openError}
-            onClose={() => setOpenError(false)}
-            type="error"
-            title="error"
-            animation="slide"
-          >
-            You got an error
-          </Modal>
-
-          <Modal
-            isOpen={openForm}
-            onClose={() => setOpenForm(false)}
-            type="form"
-            title="Login"
-            animation="fade"
-          >
-            <form>
-              <input type="email" placeholder="Email" className="input-field" />
-              <input type="password" placeholder="Password" className="input-field" />
-              <button type="submit" className="btn-primary">Login</button>
-            </form>
-          </Modal>
-        </div> */}
         <div className="btns-wrapper flex gap-3">
           <Button size="small" onClick={() => openModal({ type: "confirmation", title: "Delete Item", children: "Are you sure?" })}>
             Open Confirm Modal
@@ -138,47 +115,40 @@ const Home = () => {
             Open Wizard Modal
           </Button>
         </div>
-
-        <div className="cards-example">
-          {/* profile card */}
-          <Card className="w-100 max-w-300">
-            {/* <CardMedia src="/MyImage.jpg" alt="Profile" /> */}
-            <CardHeader title="Tayyaba Sheikh" subtitle="Web Developer" />
-            <CardContent>
-              <p className="text-base text-muted">
-                Passionate about building reusable UI and scalable web apps.
-              </p>
-            </CardContent>
-            <CardFooter>
-              <button className="press-btn btn-primary btn-small">Follow</button>
-            </CardFooter>
-          </Card>
-
-          {/* Statistic / Info Card */}
-          <Card className="card-gradient text-center p-3">
-            <CardHeader title="Total Projects" />
-            <CardContent>
-              <h2 className="heading-xl heading-bold">124</h2>
-            </CardContent>
-          </Card>
-
-          {/* Testimonial Card */}
-          \<Card className="card-glass shadow-lg">
-            <CardContent>
-              <p className="text-base text-muted italic">
-                "Tayyaba’s work exceeded expectations. Highly recommend!"
-              </p>
-            </CardContent>
-            <CardFooter>
-              <span className="text-sm text-dark">— Client Ayesha</span>
-            </CardFooter>
-          </Card>
-
-
-
+      </section>
+      <SectionWrapper
+        id="projects"
+        title="My Work"
+        subtitle="A selection of my recent projects"
+        className="bg-light"
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {topProjects.map((project) => (
+            <Card
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+            >
+              <Button
+                variant="primary"
+                onClick={() => window.open(project.link, "_blank")}
+              >
+                View Project
+              </Button>
+            </Card>
+          ))}
         </div>
 
-      </section>
+        {/* Show More Button */}
+        <div className="flex-center mt-10">
+          <Button
+            text="See More Projects"
+            variant="secondary"
+            onClick={() => (window.location.href = "/all-projects")}
+          />
+        </div>
+      </SectionWrapper>
     </>
   )
 }
