@@ -1,0 +1,61 @@
+/* ===============================
+   TEXT ANIMATIONS & EFFECTS
+================================= */
+
+/* 3D Depth Shadow */
+.text-3d {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3),
+               4px 4px 12px rgba(0, 0, 0, 0.2);
+  transform: perspective(500px) translateZ(10px);
+}
+
+/* Neon Glow */
+.text-glow {
+  color: var(--clr-accent-500);
+  text-shadow: 0 0 8px var(--clr-accent-400),
+               0 0 16px var(--clr-accent-500),
+               0 0 24px var(--clr-accent-600);
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(90deg, var(--clr-brand-400), var(--clr-accent-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Typing Effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  50% { border-color: transparent }
+}
+.text-typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--clr-accent-500);
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink .8s infinite;
+}
+
+/* Floating Up */
+@keyframes float-up {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.animate-float-up {
+  animation: float-up 0.8s ease-out forwards;
+}
+
+/* Bounce In */
+@keyframes bounce-in {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.animate-bounce-in {
+  animation: bounce-in 0.6s ease-out forwards;
+}

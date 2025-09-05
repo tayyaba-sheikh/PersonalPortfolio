@@ -87,12 +87,12 @@
 
 /* Mini Loader */
 .loader2-wrapper.small .loader2 {
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     border-width: 3px;
 }
 
 .loader2-wrapper.small .loader2::after {
-    inset: 3px;
+    inset: 5px;
     border-width: 1.5px;
 }

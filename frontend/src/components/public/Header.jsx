@@ -15,28 +15,26 @@ const Header = () => {
     const adminEmail = "yourdynamicemail@gmail.com"; // later: fetch from admin panel
     const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${adminEmail}`;
 
-    const handleEmailClick = () => {
-        window.open(gmailLink, "_blank");
-    };
+    const handleEmailClick = () => window.open(gmailLink, "_blank");
 
     return (
-        <header className="container header shadow">
+        <header className="header container flex items-center justify-between shadow p-3">
             <img
                 src={logoMap[theme] || logoMap.default}
-                style={{ width: "140px" }}
+                className='img-md md:img-sm'
                 alt="Logo"
             />
             <div>
                 <TimeDisplay />
             </div>
-            <div className="header-right">
+            <div className="flex items-center">
                 <Button
-                    type='press'
+                    styleType='press'
                     size='medium'
                     variant='primary'
                     onClick={handleEmailClick}
                 >
-                    <FaRocket /> Let's Connect
+                    <FaRocket title='lets connect' /> <span className="sm:hidden md:inline">Let's Connect</span>
                 </Button>
             </div>
         </header>

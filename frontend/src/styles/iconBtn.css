@@ -9,8 +9,6 @@
   outline: none;
   cursor: pointer;
   background: linear-gradient(145deg, var(--clr-accent-600), var(--clr-secondary-500));
-  /* box-shadow: 6px 6px 12px #c5cdd9,
-  -6px -6px 12px #ffffff; */
   box-shadow: 6px 6px 12px rgba(247, 250, 255, .2);
   transition: all 0.25s ease-in-out;
   transform-style: preserve-3d;

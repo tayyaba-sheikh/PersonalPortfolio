@@ -27,31 +27,30 @@ const Index = () => {
 
     return (
         <>
-            <section id="hero" style={{ width: "100%", height: "auto" }}>
+            <section className="container border-left border-right">
                 <Home />
-            </section>
-
-            <section id="works" style={{ width: "100%", height: "100vh" }}>
                 <Works />
+
             </section>
 
-            <section id="services" style={{ width: "100%", height: "100vh" }}>
+
+            <section id="services">
                 <Services />
             </section>
 
-            <section id="testimonials" style={{ width: "100%", height: "100vh" }}>
+            <section id="testimonials">
                 <Testimonials />
             </section>
 
-            <section id="pricing" style={{ width: "100%", height: "100vh" }}>
+            <section id="pricing">
                 <Pricing />
             </section>
 
-            <section id="faq" style={{ width: "100%", height: "100vh" }}>
+            <section id="faq">
                 <FAQ />
             </section>
 
-            <section id="contact" style={{ width: "100%", height: "100vh" }}>
+            <section id="contact">
                 <Contact />
             </section>
         </>

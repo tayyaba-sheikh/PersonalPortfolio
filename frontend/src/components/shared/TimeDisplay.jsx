@@ -67,7 +67,7 @@ const TimeDisplay = () => {
     }).format(time);
 
     return (
-        <div className="flex flex-col items-center ">
+        <div className="flex flex-col items-center sm:hidden">
             <div className="flex items-center text-base gap-1">
                 <HiOutlineLocationMarker className="text-accent" />
                 <span>

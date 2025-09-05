@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 // import { ToastContainer } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
@@ -10,7 +13,8 @@ import AdminLayout from './layout/AdminLayout.jsx';
 
 // Public pages
 import Index from './pages/public/Home/Index.jsx';
-import ProjectsDetailList from './pages/public/Works/ProjectsDetailList.jsx';
+import ProjectsList from './pages/public/Works/ProjectsList.jsx';
+import ProjectDetail from './pages/public/Works/ProjectDetail.jsx';
 import ServicesDetailList from './pages/public/Services/ServicesDetailList.jsx';
 import TestimonialsDetailList from './pages/public/Testimonials/TestimonialsDetailList.jsx';
 
@@ -28,17 +32,31 @@ import Login from './pages/admin/Login.jsx';
 // Protected Route
 import ProtectedRoute from './routes/ProtectedRoute.jsx';
 
+import ScrollToTop from './utils/scrollToTop.js';
+
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,     // animation duration
+      easing: "ease-in-out",
+      // once: true,       
+      mirror: false,     // whether elements animate out while scrolling past
+    });
+    AOS.refresh();
+  }, []);
 
   return (
     <>
-    
+      <ScrollToTop />
+
       {/* <ToastContainer position="top-right" autoClose={3000} /> */}
       <Routes>
         {/* Public Portfolio */}
         <Route path="/" element={<PublicLayout />}>
           <Route index element={<Index />} />
-          <Route path="works" element={<ProjectsDetailList />} />
+          <Route path="works" element={<ProjectsList />} />
+          <Route path="project/:id" element={<ProjectDetail />} />
           <Route path="services" element={<ServicesDetailList />} />
           <Route path="testimonials" element={<TestimonialsDetailList />} />
         </Route>

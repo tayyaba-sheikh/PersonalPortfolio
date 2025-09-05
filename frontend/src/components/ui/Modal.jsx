@@ -1,103 +1,44 @@
-// // src/components/shared/Modal.jsx
-// import React, { useEffect } from "react";
-// import Button from "./Button";
-
-// const Modal = ({
-//     children,
-//     isOpen,
-//     onClose,
-//     type = "default", // "default" | "confirmation" | "form" | "alert" | "fullscreen"
-//     title,
-//     footer,
-//     animation = "fade", // "fade" | "zoom" | "slide"
-// }) => {
-//     useEffect(() => {
-//         if (isOpen) {
-//             document.body.style.overflow = "hidden"; // prevent scrolling when modal open
-//         } else {
-//             document.body.style.overflow = "auto";
-//         }
-//     }, [isOpen]);
-
-//     if (!isOpen) return null;
-
-//     return (
-//         <div className="modal-overlay">
-//             <div
-//                 className={`modal-container modal-${type} animate-${animation}`}
-//             >
-//                 {/* Header */}
-//                 {title && (
-//                     <div className="modal-header">
-//                         <h2 className="modal-title">{title}</h2>
-//                         <Button
-//                             size="small"
-//                             variant="brand"
-//                             onClick={onClose}
-//                         >
-//                             ✕
-//                         </Button>
-//                     </div>
-//                 )}
-
-//                 {/* Body */}
-//                 <div className="modal-body">{children}</div>
-
-//                 {/* Footer */}
-//                 <div className="modal-footer">
-//                     {footer ? (
-//                         footer
-//                     ) : type === "confirmation" ? (
-//                         <>
-//                             <Button variant="error" onClick={onClose}>
-//                                 Cancel
-//                             </Button>
-//                             <Button variant="info" onClick={() => alert("Confirmed!")}>
-//                                 Confirm
-//                             </Button>
-//                         </>
-//                     ) : type === "success" ? (
-//                         <Button variant="success" onClick={onClose}>
-//                             OK
-//                         </Button>
-//                     ) : type === "error" ? (
-//                         <Button variant="error" onClick={onClose}>
-//                             OK
-//                         </Button>
-//                     ) : (
-//                         <Button variant="secondary" onClick={onClose}>
-//                             Close
-//                         </Button>
-//                     )}
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Modal;
-// src/components/shared/Modal.jsx
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Button from "./Button";
-import Avatar from "./Avatar";
 
 const Modal = ({
     children,
     isOpen,
     onClose,
-    type = "default", // "default" | "confirmation" | "form" | "success" | "error" | "fullscreen" | "image" | "video" | "wizard"
+    type = "default",
     title,
     footer,
-    animation = "fade", // "fade" | "zoom" | "slide"
+    animation = "fade",
     onConfirm,
 }) => {
+    const modalRef = useRef(null);
+
+    // 🔹 Prevent body scroll
     useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "auto";
-        }
+        document.body.style.overflow = isOpen ? "hidden" : "auto";
+        return () => (document.body.style.overflow = "auto");
     }, [isOpen]);
+
+    // 🔹 ESC key close
+    useEffect(() => {
+        if (!isOpen) return;
+
+        const handleKeyDown = (e) => {
+            if (e.key === "Escape") {
+                onClose();
+            }
+        };
+        document.addEventListener("keydown", handleKeyDown);
+
+        return () => document.removeEventListener("keydown", handleKeyDown);
+    }, [isOpen, onClose]);
+
+    // 🔹 Click outside close
+    const handleOverlayClick = (e) => {
+        if (modalRef.current && !modalRef.current.contains(e.target)) {
+            onClose();
+        }
+    };
 
     if (!isOpen) return null;
 
@@ -108,8 +49,12 @@ const Modal = ({
                     <>
                         <div className="modal-body">{children}</div>
                         <div className="modal-footer">
-                            <Button variant="error" onClick={onClose}>Cancel</Button>
-                            <Button variant="info" onClick={onConfirm || onClose}>Confirm</Button>
+                            <Button variant="error" onClick={onClose}>
+                                Cancel
+                            </Button>
+                            <Button variant="info" onClick={onConfirm || onClose}>
+                                Confirm
+                            </Button>
                         </div>
                     </>
                 );
@@ -119,7 +64,9 @@ const Modal = ({
                     <>
                         <div className="modal-body">{children}</div>
                         <div className="modal-footer">
-                            <Button variant={type} onClick={onClose}>OK</Button>
+                            <Button variant={type} onClick={onClose}>
+                                OK
+                            </Button>
                         </div>
                     </>
                 );
@@ -128,15 +75,23 @@ const Modal = ({
                     <>
                         <div className="modal-body">{children}</div>
                         <div className="modal-footer">
-                            <Button variant="secondary" onClick={onClose}>Close</Button>
-                            <Button variant="primary" type="press" type1="submit">Submit</Button>
+                            <Button variant="secondary" onClick={onClose}>
+                                Close
+                            </Button>
+                            <Button variant="primary" type="submit">
+                                Submit
+                            </Button>
                         </div>
                     </>
                 );
             case "image":
                 return (
                     <div className="modal-body flex justify-center items-center">
-                        <Avatar src={children} size="xlarge" shape="circle" className="avatar-shadow" />
+                        <img
+                            src={children}
+                            alt={title || "Preview"}
+                            className="max-h-[80vh] max-w-full rounded-lg shadow-lg"
+                        />
                     </div>
                 );
             case "video":
@@ -150,8 +105,12 @@ const Modal = ({
                     <>
                         <div className="modal-body">{children}</div>
                         <div className="modal-footer">
-                            <Button variant="secondary" onClick={onClose}>Back</Button>
-                            <Button variant="primary" onClick={onConfirm}>Next</Button>
+                            <Button variant="secondary" onClick={onClose}>
+                                Back
+                            </Button>
+                            <Button variant="primary" onClick={onConfirm}>
+                                Next
+                            </Button>
                         </div>
                     </>
                 );
@@ -161,12 +120,20 @@ const Modal = ({
     };
 
     return (
-        <div className="modal-overlay">
-            <div className={`modal-container modal-${type} animate-${animation}`}>
+        <div
+            className="modal-overlay"
+            onClick={handleOverlayClick}
+        >
+            <div
+                ref={modalRef}
+                className={`modal-container modal-${type} animate-${animation}`}
+            >
                 {title && (
                     <div className="modal-header">
                         <h2 className="modal-title">{title}</h2>
-                        <Button size="small" variant="brand" onClick={onClose}>✕</Button>
+                        <Button size="small" variant="brand" onClick={onClose}>
+                            ✕
+                        </Button>
                     </div>
                 )}
                 {renderContent()}

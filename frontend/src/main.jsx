@@ -17,8 +17,11 @@ import './styles/card.css'
 import './styles/list.css'
 import './styles/table.css'
 import './styles/form.css'
-import './styles/iconBtn.css'
 import './styles/tooltip.css'
+import './styles/iconBtn.css'
+import './styles/timelineItem.css'
+import './styles/statsCard.css'
+import './styles/projectCard.css'
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import { ModalProvider } from "./context/ModalContext.jsx";
 

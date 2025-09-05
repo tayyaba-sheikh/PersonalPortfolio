@@ -1,13 +1,13 @@
-.container {
+/* .container {
     width: 1000px;
     margin: 0 auto;
-}
+} */
 
 /* Header.css */
 .header {
-    background-color: #ffffff;
+    background-color: var(--clr-bg-base);
     padding: 1rem 0;
-    border-bottom: 1px solid #e5e5e5;
+    border: 1px solid var(--clr-border);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,23 +25,16 @@
 /* ===============================
    Side Navigation
 ================================= */
-.sidenav-wrapper {
+/* .sidenav-wrapper {
     position: fixed;
     top: 7rem;
     right: 4rem;
-    /* height: 60vh; */
-    /* background: var(--color-bg); */
-    /* box-shadow: var(--shadow-md); */
-    /* border-right: 1px solid var(--color-border); */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* padding: 1rem 1rem; */
     z-index: 1000;
     transition: all 0.3s ease;
-    /* overflow-x: visible; */
-    /* overflow-y: auto; */
 }
 
 .sidenav {
@@ -53,7 +46,6 @@
     padding: 0.5rem 0;
 }
 
-/* Make sure scrollbar fits the modern design */
 .sidenav-wrapper::-webkit-scrollbar {
     width: 6px;
 }
@@ -63,7 +55,6 @@
     border-radius: 10px;
 }
 
-/* Active link styling */
 .sidenav .icon-btn.active {
     background: var(--color-primary);
     color: #fff;
@@ -74,7 +65,6 @@
     color: #fff;
 }
 
-/* Responsive behaviour */
 @media screen and (max-width: 768px) {
     .sidenav-wrapper {
         bottom: 0;
@@ -92,4 +82,34 @@
         flex-direction: row;
         gap: 1rem;
     }
+} */
+
+/* ===============================
+   SIDENAV / NAVIGATION HELPERS
+================================= */
+.sidenav-base {
+  padding: 1rem 2rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sidenav-mobile {
+  background: var(--clr-bg-base);
+  border-top: 1px solid var(--clr-border);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Responsive overrides */
+@media (max-width: 768px) {
+  .sidenav-desktop { display: none; }
+  .sidenav-mobile { display: flex; }
+}
+@media (min-width: 769px) {
+  .sidenav-desktop { display: flex; }
+  .sidenav-mobile { display: none; }
 }

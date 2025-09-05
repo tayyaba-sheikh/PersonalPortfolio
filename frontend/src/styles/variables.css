@@ -1,49 +1,56 @@
 :root {
-/* Brand Palette (lavender / purple) */
---clr-brand-700: #5d4f66;   /* darker of #826e8b */
---clr-brand-600: #6f6077;
---clr-brand-500: #826e8b;   /* given */
---clr-brand-400: #9a86a2;
---clr-brand-300: #b2a0ba;
+  --font-family-base: 'Poppins', sans-serif;
+  --font-family-alt: 'Montserrat', sans-serif;
+  --font-family-signature: 'Dancing Script', cursive;
 
-/* Accent Palette (rose-pink) */
---clr-accent-600: #d95a85;  /* darker of #eb6e9b */
---clr-accent-500: #eb6e9b;  /* given */
---clr-accent-400: #f08aad;
---clr-accent-300: #f5a5c0;
 
-/* Secondary Palette (soft blush) */
---clr-secondary-600: #d1839e; /* darker of #e69cba */
---clr-secondary-500: #e69cba; /* given */
---clr-secondary-400: #ecabc7;
---clr-secondary-300: #f1b9d1;
+  /* Brand Palette (lavender / purple) */
+  --clr-brand-700: #5d4f66;
+  --clr-brand-600: #6f6077;
+  --clr-brand-500: #826e8b;
+  --clr-brand-400: #9a86a2;
+  --clr-brand-300: #b2a0ba;
 
-/* Soft Highlights */
---clr-soft-500: #f4b3c7; /* given */
---clr-soft-400: #f5cdd0; /* given */
---clr-soft-300: #fae2e6;
+  /* Accent Palette (rose-pink) */
+  --clr-accent-600: #d95a85;
+  --clr-accent-500: #eb6e9b;
+  --clr-accent-400: #f08aad;
+  --clr-accent-300: #f5a5c0;
 
-/* Cool Neutral (pastel balance) */
---clr-neutral-500: #f5dfe7;
---clr-neutral-400: #f9ebf0;
---clr-neutral-300: #fdf5f7;
+  /* Secondary Palette (soft blush) */
+  --clr-secondary-600: #d1839e;
+  --clr-secondary-500: #e69cba;
+  --clr-secondary-400: #ecabc7;
+  --clr-secondary-300: #f1b9d1;
 
-/* Backgrounds */
---clr-bg-base: #ffffff;
---clr-bg-muted: #faf7f9;
---clr-bg-subtle: #fdfcfd;
+  /* Soft Highlights */
+  --clr-soft-500: #f4b3c7;
+  --clr-soft-400: #f5cdd0;
+  --clr-soft-300: #fae2e6;
 
-/* Text */
---clr-text-base: #2d2a32;   /* dark contrast */
---clr-text-muted: #6b6471;
---clr-text-inverse: #ffffff;
+  /* Cool Neutral (pastel balance) */
+  --clr-neutral-500: #f5dfe7;
+  --clr-neutral-400: #f9ebf0;
+  --clr-neutral-300: #fdf5f7;
 
-/* Borders & Surfaces */
---clr-border: #e5dbe6;
---clr-surface: #ffffff;
---clr-surface-hover: #f8f4f8;
+  /* Backgrounds */
+  --clr-bg-base: #000000;
+  --clr-bg-muted: #7c7c7c;
+  --clr-bg-subtle: #fdfcfd;
 
-/* Semantic States */
+  /* Text */
+  --clr-text-base: #ffffff;
+  /* --clr-text-base: #2d2a32; */
+  --clr-text-muted: #6b6471;
+  --clr-text-inverse: #ffffff;
+
+  /* Borders & Surfaces */
+  --clr-border: #2d2d2d;
+  /* --clr-border: #e5dbe6; */
+  --clr-surface: #ffffff;
+  --clr-surface-hover: #f8f4f8;
+
+  /* Semantic States */
   --clr-success-dark: #3a7c5a;
   --clr-success: #4caf7a;
   --clr-success-light: #a3d6b8;
@@ -61,49 +68,120 @@
   --clr-info-light: #c3e2ec;
 }
 
+
+/* -------- TYPOGRAPHY -------- */
+:root {
+  --font-family-base: 'Poppins', sans-serif;
+  --font-family-alt: 'Montserrat', sans-serif;
+  --font-family-signature: 'Dancing Script', cursive;
+
+  /* Font sizes (fluid ready) */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+  --font-3xl: 1.875rem;
+  --font-4xl: 2.25rem;
+  --font-5xl: 3rem;
+  --font-6xl: 3.75rem;
+
+  /* Heading scale */
+  --heading-xl: 3rem;
+  --heading-lg: 2rem;
+  --heading-md: 1.5rem;
+  --heading-sm: 1.2rem;
+
+  /* Weights */
+  --fw-thin: 100;
+  --fw-extralight: 200;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+}
+
+/* -------- SPACING -------- */
+:root {
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+}
+
+/* -------- RADII -------- */
+:root {
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 10rem;
+}
+
+/* -------- SHADOWS -------- */
+:root {
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* -------- BREAKPOINTS -------- */
+:root {
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+}
+
 /* Theme 2 */
 .theme-2 {
   /* Brand Palette */
-  --clr-brand-700: #4d4be0;   /* darker of #7371fc */
+  --clr-brand-700: #4d4be0;
   --clr-brand-600: #5f5cf0;
-  --clr-brand-500: #7371fc;   /* given */
+  --clr-brand-500: #7371fc;
   --clr-brand-400: #8b89fd;
   --clr-brand-300: #a2a1ff;
 
   /* Accent Palette */
-  --clr-accent-600: #8a7de8;  /* darker of #a594f9 */
-  --clr-accent-500: #a594f9;  /* given */
+  --clr-accent-600: #8a7de8;
+  --clr-accent-500: #a594f9;
   --clr-accent-400: #b3a6fa;
   --clr-accent-300: #c5bbfb;
 
   /* Secondary Palette */
-  --clr-secondary-600: #a796f5; /* darker of #cdc1ff */
-  --clr-secondary-500: #cdc1ff; /* given */
+  --clr-secondary-600: #a796f5;
+  --clr-secondary-500: #cdc1ff;
   --clr-secondary-400: #d8cffd;
   --clr-secondary-300: #e4ddff;
 
   /* Soft Highlights */
-  --clr-soft-500: #f5efff; /* given */
+  --clr-soft-500: #f5efff;
   --clr-soft-400: #f8f3ff;
   --clr-soft-300: #fbf9ff;
 
   /* Cool Neutral */
-  --clr-neutral-500: #e5d9f2; /* given */
+  --clr-neutral-500: #e5d9f2;
   --clr-neutral-400: #eee6f8;
   --clr-neutral-300: #f7f3fb;
 
   /* Backgrounds */
-  --clr-bg-base: #ffffff;
+  --clr-bg-base: #000000;
   --clr-bg-muted: #faf9ff;
   --clr-bg-subtle: #fdfcff;
 
   /* Text */
-  --clr-text-base: #1c1b2e;   /* dark indigo for readability */
+  --clr-text-base: #ffffff;
+  /* --clr-text-base: #1c1b2e; */
   --clr-text-muted: #5c587a;
   --clr-text-inverse: #ffffff;
 
   /* Borders & Surfaces */
-  --clr-border: #e1dbf7;
+  --clr-border: #2d2d2d;
+  /* --clr-border: #e1dbf7; */
   --clr-surface: #ffffff;
   --clr-surface-hover: #f4f1fb;
 
@@ -118,26 +196,26 @@
 /* Theme 3 */
 .theme-3 {
   /* Brand Palette (Coral Peach) */
-  --clr-brand-700: #d97f72;   /* darker from #feb4a7 */
+  --clr-brand-700: #d97f72;
   --clr-brand-600: #e99184;
-  --clr-brand-500: #feb4a7;   /* given */
+  --clr-brand-500: #feb4a7;
   --clr-brand-400: #fec6bb;
-  --clr-brand-300: #fed5cd;   /* given */
+  --clr-brand-300: #fed5cd;
 
   /* Accent Palette (Warm Peach/Orange) */
-  --clr-accent-600: #e69d72;  /* darker of #ffc69e */
-  --clr-accent-500: #ffc69e;  /* given */
+  --clr-accent-600: #e69d72;
+  --clr-accent-500: #ffc69e;
   --clr-accent-400: #ffd4b9;
   --clr-accent-300: #ffe5d3;
 
   /* Secondary Palette (Soft Apricot tones) */
-  --clr-secondary-600: #e5b590; 
-  --clr-secondary-500: #fadbc3; /* given */
+  --clr-secondary-600: #e5b590;
+  --clr-secondary-500: #fadbc3;
   --clr-secondary-400: #fde7d5;
   --clr-secondary-300: #fff2e6;
 
   /* Soft Highlights (Light Creamy Pink) */
-  --clr-soft-500: #f8edeb; /* given */
+  --clr-soft-500: #f8edeb;
   --clr-soft-400: #fbf3f1;
   --clr-soft-300: #fef9f8;
 
@@ -147,17 +225,18 @@
   --clr-neutral-300: #ffffff;
 
   /* Backgrounds */
-  --clr-bg-base: #ffffff;
+  --clr-bg-base: #000000;
   --clr-bg-muted: #fefaf8;
   --clr-bg-subtle: #fff5f2;
 
   /* Text */
-  --clr-text-base: #2d2a28;
+  --clr-text-base: #ffffff;
+  /* --clr-text-base: #2d2a28; */
   --clr-text-muted: #6b605d;
   --clr-text-inverse: #ffffff;
 
   /* Borders & Surfaces */
-  --clr-border: #f1e0db;
+  --clr-border: #2d2d2d;
   --clr-surface: #ffffff;
   --clr-surface-hover: #fff8f6;
 
@@ -168,41 +247,3 @@
   --clr-info: #7dc4d4;
 
 }
-
-/* :root {
-  Default theme (palette 1)
-  --color-primary: #f8abbd;
-  --color-secondary: #f6cddd;
-  --color-accent: #d7b0dc;
-  --color-bg: #f5e5e6;
-  --color-text: #222;
-  --color-heading: #111;
-  --color-border: #e6cee6;
-
-  Shadows
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
-  --shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-Theme 2
-.theme-2 {
-  --color-primary: #ffa9b9;
-  --color-secondary: #ffe0de;
-  --color-accent: #83e1e0;
-  --color-bg: #fff2f1;
-  --color-text: #333;
-  --color-heading: #111;
-  --color-border: #ff94a8;
-}
-
-Theme 3
-.theme-3 {
-  --color-primary: #573067;
-  --color-secondary: #7b589a;
-  --color-accent: #f5aac8;
-  --color-bg: #fae4d7;
-  --color-text: #1a1a1a;
-  --color-heading: #0d0d0d;
-  --color-border: #a485c1;
-} */

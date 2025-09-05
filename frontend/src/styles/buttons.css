@@ -1,35 +1,31 @@
 @import "./animations.css";
 
 /* ===============================
-   BUTTONS
+   BUTTONS SYSTEM
+   - Base styles
+   - Variants (color themes)
+   - Special effects (3D, shine, flip)
+   - Size variants
 ================================= */
 
-/* ===== 3D Base Button DEPTH PRESS (PUSH IN) ===== */
+
+/* ===== Base: Press Button (Depth Push) ===== */
 .press-btn {
     display: inline-block;
-
-
-    /* Default values */
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    border-radius: 5rem;
     color: var(--clr-text-inverse);
     background: var(--clr-accent-500);
     --btn-shadow: var(--clr-accent-600);
 
     /* Depth effect */
     box-shadow: 0 6px 0 var(--btn-shadow), 0 8px 15px rgba(0, 0, 0, 0.3);
-
-    border: none;
-    border-radius: 5rem;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
     transform: translateY(0);
-    position: relative;
-    overflow: hidden;
+    transition: all 0.2s ease-in-out;
 }
-
-/* Depth effect using shadow */
-/* .press-btn {
-  box-shadow: 0 6px 0 var(--clr-accent-600), 0 8px 15px rgba(0, 0, 0, 0.3);
-} */
 
 .press-btn:hover {
     transform: translateY(3px);
@@ -61,103 +57,104 @@
     left: 100%;
 }
 
-/* ===== 3D Magnetic Button ===== */
+
+/* ===== Magnetic Button ===== */
 .magnetic-btn {
     display: inline-block;
+    cursor: pointer;
     color: var(--clr-text-inverse);
     border-radius: 5rem;
-    box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.2),
-        -6px -6px 16px rgba(255, 255, 255, 0.3);
     text-decoration: none;
     perspective: 1000px;
-    cursor: pointer;
     will-change: transform;
+
+    box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.2),
+        -6px -6px 16px rgba(255, 255, 255, 0.3);
 }
 
-/* ===== 3D FLIP Button ===== */
+
+/* ===== Flip Button ===== */
 .flip-btn {
     position: relative;
     display: inline-block;
-    perspective: 1000px;
-    /* enables 3D space */
     width: 180px;
     height: 50px;
+    cursor: pointer;
     border: none;
     background: transparent;
-    cursor: pointer;
+    perspective: 1000px;
+    /* enables 3D space */
 }
 
 .flip-btn .inner {
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
     line-height: 50px;
+    text-align: center;
     color: var(--clr-text-inverse);
     border-radius: 5rem;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+
     transform-style: preserve-3d;
     transition: transform 0.6s ease;
 }
 
-/* Front and Back faces */
 .flip-btn .front,
 .flip-btn .back {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    backface-visibility: hidden;
-    /* hides backside */
+    inset: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 12px;
+    backface-visibility: hidden;
 }
 
-/* Front face (default) */
 .flip-btn .front {
     color: var(--clr-text-inverse);
 }
 
-/* Back face (revealed on hover) */
 .flip-btn .back {
     color: var(--clr-text-inverse);
     transform: rotateY(180deg);
 }
 
-/* Flip effect */
 .flip-btn:hover .inner {
     transform: rotateY(180deg);
 }
 
-/* ===== 3D GRADIENT Button ===== */
+
+/* ===== Gradient Button ===== */
 .gradient-btn {
     position: relative;
     display: inline-block;
-    color: var(--clr-text-inverse);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
     border: none;
     border-radius: 5rem;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    box-shadow: 0 6px 0 var(--clr-accent-600), 0 8px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    color: var(--clr-text-inverse);
     overflow: hidden;
+
+    box-shadow: 0 6px 0 var(--clr-accent-600),
+        0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
-/* 3D Lift Effect */
 .gradient-btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 0 var(--clr-accent-600), 0 15px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 0 var(--clr-accent-600),
+        0 15px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Pressed Effect */
 .gradient-btn:active {
     transform: translateY(2px);
-    box-shadow: 0 4px 0 var(--clr-accent-600), 0 6px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 0 var(--clr-accent-600),
+        0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Light Sweep (Gradient Shine) */
+/* Gradient Shine */
 .gradient-btn::before {
     content: "";
     position: absolute;
@@ -176,14 +173,12 @@
 }
 
 
+/* ===============================
+   COLOR VARIANTS
+================================= */
 
-
-/* ---------- Variants ---------- */
-
-/* Primary (Blue / Purple) */
 .btn-primary {
     background: linear-gradient(145deg, var(--clr-secondary-500), var(--clr-accent-500));
-    /* gradient background */
     color: var(--clr-text-inverse);
     --btn-shadow: var(--clr-accent-600);
 }
@@ -200,7 +195,6 @@
     --btn-shadow: var(--clr-accent-600);
 }
 
-/* Success (Green) */
 .btn-success {
     background: linear-gradient(145deg, var(--clr-success), #3e8f63);
     color: var(--clr-text-inverse);
@@ -213,25 +207,21 @@
     --btn-shadow: #7a1c23;
 }
 
-/* OR outline style */
 .btn-error-outline {
+    background: transparent;
     border: 2px solid var(--clr-error);
     color: var(--clr-error);
-    background: transparent;
     box-shadow: none;
     --btn-shadow: var(--clr-error);
     /* fallback for press-btn */
 }
 
-
-/* Warning (Orange/Yellow) */
 .btn-warning {
     background: linear-gradient(145deg, var(--clr-warning), #d99a4d);
     color: var(--clr-text-base);
     --btn-shadow: #a15c2f;
 }
 
-/* Info (Teal/Cyan) */
 .btn-info {
     background: linear-gradient(145deg, var(--clr-info), #4a9db4);
     color: var(--clr-text-inverse);
@@ -239,27 +229,63 @@
 }
 
 
-/* ---------- Size Variants ---------- */
+/* ===============================
+   SIZE VARIANTS
+================================= */
+
 .btn-small {
     font-size: 0.8rem;
-    padding: .6rem 1.3rem;
+    padding: 0.6rem 1.3rem;
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
 .btn-medium {
     font-size: 1rem;
-    padding: .56rem 1.5rem;
+    padding: 0.56rem 1.5rem;
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
 .btn-large {
     font-size: 1.1rem;
-    padding: .8rem 2rem;
+    padding: 0.8rem 2rem;
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
+}
+
+
+
+
+
+
+/* =================================================== */
+/* =================================================== */
+/* =================================================== */
+.btn-outline {
+    background-color: transparent;
+    color: var(--clr-bg-muted);
+    font-size: 1rem;
+    border: 1px solid var(--clr-bg-muted);
+    border-radius: 3rem;
+    padding: .6rem 2.3rem;
+    box-shadow: 0px 3px 0px var(--clr-bg-muted);
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    box-shadow: none;
+    transform: translateY(3px);
+    border-color: var(--clr-accent-400);
+    color: var(--clr-accent-400);
+}
+
+.btn-outline.active {
+    box-shadow: 0px 3px 0px var(--clr-accent-400);
+    transform: translateY(3px);
+    border-color: var(--clr-accent-400);
+    color: var(--clr-accent-400);
 }

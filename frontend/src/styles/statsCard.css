@@ -1,0 +1,50 @@
+@import url('./variables.css');
+
+.stats-card {
+    background: transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid var(--clr-brand-500);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.stats-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--clr-text-inverse);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.stats-label {
+    font-size: .9rem;
+    color: var(--clr-secondary-500);
+    text-align: left;
+}
+
+.stats-right {
+    display: flex;
+    align-items: start;
+}
+
+.stats-icon__wrapper {
+    width: 100%;
+    display: flex;
+    background-color: var(--clr-brand-700);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.stats-icon {
+    font-size: 2rem;
+}
