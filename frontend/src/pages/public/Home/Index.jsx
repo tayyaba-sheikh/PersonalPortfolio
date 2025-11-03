@@ -4,7 +4,7 @@ import Home from "./Home.jsx";
 import Works from "./Works.jsx";
 import Services from "./Services.jsx";
 import Testimonials from "./Testimonials.jsx";
-import Pricing from "./Pricing.jsx";
+import Newsletter from "./Newsletter.jsx";
 import FAQ from "./FAQ.jsx";
 import Contact from "./Contact.jsx";
 
@@ -30,29 +30,14 @@ const Index = () => {
             <section className="container border-left border-right">
                 <Home />
                 <Works />
-
-            </section>
-
-
-            <section id="services">
                 <Services />
-            </section>
-
-            <section id="testimonials">
                 <Testimonials />
-            </section>
-
-            <section id="pricing">
-                <Pricing />
-            </section>
-
-            <section id="faq">
+                <Newsletter />
                 <FAQ />
+                <Contact />
+
             </section>
 
-            <section id="contact">
-                <Contact />
-            </section>
         </>
     )
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Paragraph = ({
+const   Paragraph = ({
     children,
     size,
     weight,
     color,
     align,
     className,
-    aos,
+    aos = 'fade-left',
     aosDelay,
     aosDuration
 }) => {

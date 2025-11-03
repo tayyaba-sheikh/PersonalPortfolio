@@ -3,69 +3,68 @@
   --font-family-alt: 'Montserrat', sans-serif;
   --font-family-signature: 'Dancing Script', cursive;
 
+  /* Brand Palette (deep violet) */
+  --clr-brand-700: #1b2540;
+  --clr-brand-600: #25335c;
+  --clr-brand-500: #34447a;
+  --clr-brand-400: #4a5ca0;
+  --clr-brand-300: #6b7ec2;
 
-  /* Brand Palette (lavender / purple) */
-  --clr-brand-700: #5d4f66;
-  --clr-brand-600: #6f6077;
-  --clr-brand-500: #826e8b;
-  --clr-brand-400: #9a86a2;
-  --clr-brand-300: #b2a0ba;
+  /* Accent Palette (neon cyan) */
+  --clr-accent-600: #007a7a;
+  --clr-accent-500: #00a5a5;
+  --clr-accent-400: #1fd1d1;
+  --clr-accent-300: #73f5f5;
 
-  /* Accent Palette (rose-pink) */
-  --clr-accent-600: #d95a85;
-  --clr-accent-500: #eb6e9b;
-  --clr-accent-400: #f08aad;
-  --clr-accent-300: #f5a5c0;
-
-  /* Secondary Palette (soft blush) */
-  --clr-secondary-600: #d1839e;
-  --clr-secondary-500: #e69cba;
-  --clr-secondary-400: #ecabc7;
-  --clr-secondary-300: #f1b9d1;
+  /* Secondary Palette (neon pink) */
+  --clr-secondary-600: #a6006b;
+  --clr-secondary-500: #d11c8c;
+  --clr-secondary-400: #f542aa;
+  --clr-secondary-300: #ff8fd2;
 
   /* Soft Highlights */
-  --clr-soft-500: #f4b3c7;
-  --clr-soft-400: #f5cdd0;
-  --clr-soft-300: #fae2e6;
+  --clr-soft-500: #f5a8dc;
+  --clr-soft-400: #f7c3e6;
+  --clr-soft-300: #fbe6f5;
 
-  /* Cool Neutral (pastel balance) */
-  --clr-neutral-500: #f5dfe7;
-  --clr-neutral-400: #f9ebf0;
-  --clr-neutral-300: #fdf5f7;
+  /* Cool Neutral (techy grays) */
+  --clr-neutral-500: #2a2a2a;
+  --clr-neutral-400: #3d3d3d;
+  --clr-neutral-300: #585858;
 
   /* Backgrounds */
-  --clr-bg-base: #000000;
-  --clr-bg-muted: #7c7c7c;
-  --clr-bg-subtle: #fdfcfd;
+  --clr-bg-base: #0a0a0f;
+  --clr-bg-muted: #57577e;
+  --clr-bg-subtle: #0f0f17;
 
   /* Text */
-  --clr-text-base: #ffffff;
-  /* --clr-text-base: #2d2a32; */
-  --clr-text-muted: #6b6471;
+  --clr-text-base: #e6e6ff;
+  --clr-text-muted: #8c8ca6;
   --clr-text-inverse: #ffffff;
 
   /* Borders & Surfaces */
-  --clr-border: #2d2d2d;
-  /* --clr-border: #e5dbe6; */
-  --clr-surface: #ffffff;
-  --clr-surface-hover: #f8f4f8;
+  --clr-border: #262640;
+  --clr-surface: #1a1a26;
+  --clr-surface-hover: #262633;
 
   /* Semantic States */
-  --clr-success-dark: #3a7c5a;
-  --clr-success: #4caf7a;
-  --clr-success-light: #a3d6b8;
+  --clr-success-dark: #146644;
+  --clr-success: #19a866;
+  --clr-success-light: #73e6b1;
 
-  --clr-warning-dark: #d6a25c;
-  --clr-warning: #f2c27d;
-  --clr-warning-light: #f8dcb0;
+  --clr-warning-dark: #996600;
+  --clr-warning: #ffb300;
+  --clr-warning-light: #ffd966;
 
-  --clr-error-dark: #b34f62;
-  --clr-error: #e76b82;
-  --clr-error-light: #f5a1b0;
+  --clr-error-dark: #800020;
+  --clr-error: #e6003c;
+  --clr-error-light: #ff8099;
 
-  --clr-info-dark: #6aa2b4;
-  --clr-info: #8dc9db;
-  --clr-info-light: #c3e2ec;
+  --clr-info-dark: #004c66;
+  --clr-info: #0099cc;
+  --clr-info-light: #66d9ff;
+
+
 }
 
 
@@ -139,111 +138,132 @@
 
 /* Theme 2 */
 .theme-2 {
-  /* Brand Palette */
-  --clr-brand-700: #4d4be0;
-  --clr-brand-600: #5f5cf0;
-  --clr-brand-500: #7371fc;
-  --clr-brand-400: #8b89fd;
-  --clr-brand-300: #a2a1ff;
+  /* Brand Palette (golden yellow) */
+  --clr-brand-700: #5c4a00;
+  --clr-brand-600: #7d6500;
+  --clr-brand-500: #a68200;
+  --clr-brand-400: #d1a51a;
+  --clr-brand-300: #f2c94c;
 
-  /* Accent Palette */
-  --clr-accent-600: #8a7de8;
-  --clr-accent-500: #a594f9;
-  --clr-accent-400: #b3a6fa;
-  --clr-accent-300: #c5bbfb;
+  /* Accent Palette (lime green) */
+  --clr-accent-600: #4a7a00;
+  --clr-accent-500: #669900;
+  --clr-accent-400: #8bc34a;
+  --clr-accent-300: #b2e37a;
 
-  /* Secondary Palette */
-  --clr-secondary-600: #a796f5;
-  --clr-secondary-500: #cdc1ff;
-  --clr-secondary-400: #d8cffd;
-  --clr-secondary-300: #e4ddff;
+  /* Secondary Palette (citrus orange) */
+  --clr-secondary-600: #995c00;
+  --clr-secondary-500: #cc7a00;
+  --clr-secondary-400: #ff9800;
+  --clr-secondary-300: #ffb84d;
 
   /* Soft Highlights */
-  --clr-soft-500: #f5efff;
-  --clr-soft-400: #f8f3ff;
-  --clr-soft-300: #fbf9ff;
+  --clr-soft-500: #f6e2a4;
+  --clr-soft-400: #f9edc7;
+  --clr-soft-300: #fdf8e7;
 
-  /* Cool Neutral */
-  --clr-neutral-500: #e5d9f2;
-  --clr-neutral-400: #eee6f8;
-  --clr-neutral-300: #f7f3fb;
+  /* Cool Neutral (beige-gray) */
+  --clr-neutral-500: #ece7da;
+  --clr-neutral-400: #f7f4eb;
+  --clr-neutral-300: #fcfbf8;
 
   /* Backgrounds */
   --clr-bg-base: #000000;
-  --clr-bg-muted: #faf9ff;
-  --clr-bg-subtle: #fdfcff;
+  --clr-bg-muted: #7a6c46;
+  --clr-bg-subtle: #090909;
 
   /* Text */
   --clr-text-base: #ffffff;
-  /* --clr-text-base: #1c1b2e; */
-  --clr-text-muted: #5c587a;
+  --clr-text-muted: #b4b4b4;
   --clr-text-inverse: #ffffff;
 
   /* Borders & Surfaces */
-  --clr-border: #2d2d2d;
-  /* --clr-border: #e1dbf7; */
+  --clr-border: #c2b78c;
   --clr-surface: #ffffff;
-  --clr-surface-hover: #f4f1fb;
+  --clr-surface-hover: #fff8e6;
 
   /* Semantic States */
-  --clr-success: #4cc9a7;
-  --clr-warning: #f5c76d;
-  --clr-error: #e05a7d;
-  --clr-info: #6fb3f5;
+  --clr-success-dark: #33661a;
+  --clr-success: #66a633;
+  --clr-success-light: #c6e6b2;
+
+  --clr-warning-dark: #996600;
+  --clr-warning: #e6a800;
+  --clr-warning-light: #ffe17a;
+
+  --clr-error-dark: #8c1c1c;
+  --clr-error: #cc3333;
+  --clr-error-light: #f5a1a1;
+
+  --clr-info-dark: #1c4d7a;
+  --clr-info: #3c7fb3;
+  --clr-info-light: #a3c9e6;
 
 }
 
 /* Theme 3 */
 .theme-3 {
-  /* Brand Palette (Coral Peach) */
-  --clr-brand-700: #d97f72;
-  --clr-brand-600: #e99184;
-  --clr-brand-500: #feb4a7;
-  --clr-brand-400: #fec6bb;
-  --clr-brand-300: #fed5cd;
 
-  /* Accent Palette (Warm Peach/Orange) */
-  --clr-accent-600: #e69d72;
-  --clr-accent-500: #ffc69e;
-  --clr-accent-400: #ffd4b9;
-  --clr-accent-300: #ffe5d3;
+  /* Brand Palette (lavender / purple) */
+  --clr-brand-700: #5d4f66;
+  --clr-brand-600: #6f6077;
+  --clr-brand-500: #826e8b;
+  --clr-brand-400: #9a86a2;
+  --clr-brand-300: #b2a0ba;
 
-  /* Secondary Palette (Soft Apricot tones) */
-  --clr-secondary-600: #e5b590;
-  --clr-secondary-500: #fadbc3;
-  --clr-secondary-400: #fde7d5;
-  --clr-secondary-300: #fff2e6;
+  /* Accent Palette (rose-pink) */
+  --clr-accent-600: #d95a85;
+  --clr-accent-500: #eb6e9b;
+  --clr-accent-400: #f08aad;
+  --clr-accent-300: #f5a5c0;
 
-  /* Soft Highlights (Light Creamy Pink) */
-  --clr-soft-500: #f8edeb;
-  --clr-soft-400: #fbf3f1;
-  --clr-soft-300: #fef9f8;
+  /* Secondary Palette (soft blush) */
+  --clr-secondary-600: #d1839e;
+  --clr-secondary-500: #e69cba;
+  --clr-secondary-400: #ecabc7;
+  --clr-secondary-300: #f1b9d1;
 
-  /* Cool Neutral (balance whites) */
-  --clr-neutral-500: #f6f9f9;
-  --clr-neutral-400: #fafdfd;
-  --clr-neutral-300: #ffffff;
+  /* Soft Highlights */
+  --clr-soft-500: #f4b3c7;
+  --clr-soft-400: #f5cdd0;
+  --clr-soft-300: #fae2e6;
+
+  /* Cool Neutral (pastel balance) */
+  --clr-neutral-500: #f5dfe7;
+  --clr-neutral-400: #f9ebf0;
+  --clr-neutral-300: #fdf5f7;
 
   /* Backgrounds */
   --clr-bg-base: #000000;
-  --clr-bg-muted: #fefaf8;
-  --clr-bg-subtle: #fff5f2;
+  --clr-bg-muted: #7c7c7c;
+  --clr-bg-subtle: #090909;
 
   /* Text */
   --clr-text-base: #ffffff;
-  /* --clr-text-base: #2d2a28; */
-  --clr-text-muted: #6b605d;
+  /* --clr-text-base: #2d2a32; */
+  --clr-text-muted: #6b6471;
   --clr-text-inverse: #ffffff;
 
   /* Borders & Surfaces */
   --clr-border: #2d2d2d;
+  /* --clr-border: #e5dbe6; */
   --clr-surface: #ffffff;
-  --clr-surface-hover: #fff8f6;
+  --clr-surface-hover: #f8f4f8;
 
-  /* Semantic States (adjusted to pastel theme) */
-  --clr-success: #6cc59b;
-  --clr-warning: #f5b86b;
-  --clr-error: #e57373;
-  --clr-info: #7dc4d4;
+  /* Semantic States */
+  --clr-success-dark: #3a7c5a;
+  --clr-success: #4caf7a;
+  --clr-success-light: #a3d6b8;
 
+  --clr-warning-dark: #d6a25c;
+  --clr-warning: #f2c27d;
+  --clr-warning-light: #f8dcb0;
+
+  --clr-error-dark: #b34f62;
+  --clr-error: #e76b82;
+  --clr-error-light: #f5a1b0;
+
+  --clr-info-dark: #6aa2b4;
+  --clr-info: #8dc9db;
+  --clr-info-light: #c3e2ec;
 }

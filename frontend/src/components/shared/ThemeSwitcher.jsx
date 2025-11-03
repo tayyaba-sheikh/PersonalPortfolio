@@ -7,9 +7,9 @@ import { FaPaintBrush } from "react-icons/fa";
 import "../../styles/theme.css";
 
 const themes = [
-    { id: "default", label: "Default", color: "#d95a85", icon: <FaPaintBrush /> },
-    { id: "theme-2", label: "Lavender", color: "#8a7de8", icon: <FaPaintBrush /> },
-    { id: "theme-3", label: "Coral Peach", color: "#e69d72", icon: <FaPaintBrush /> },
+    { id: "default", label: "Dark Neon", color: "#00a5a5", icon: <FaPaintBrush /> },
+    { id: "theme-2", label: "Yellow Lime", color: "#a68200", icon: <FaPaintBrush /> },
+    { id: "theme-3", label: "Pink Grey", color: "#eb6e9b", icon: <FaPaintBrush /> },
 ];
 
 export const ThemeSwitcher = () => {

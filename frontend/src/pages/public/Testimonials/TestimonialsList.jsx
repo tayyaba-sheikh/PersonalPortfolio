@@ -1,6 +1,6 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import SectionHeader from "../../../components/shared/SectionHeader";
+import TagFilter from "../../../components/shared/TagFilter";
 import TestimonialCard from "../../../components/shared/TestimonialCard";
 
 const testimonials = [
@@ -28,27 +28,17 @@ const testimonials = [
   },
 ];
 
-const Testimonials = () => {
-  const navigate = useNavigate();
-  const topThree = testimonials.slice(0, 3);
+const TestimonialsList = () => {
 
   return (
-    <section
-      id="testimonials"
-      className="container flex flex-col items-center text-center pb-5"
-    >
-      <SectionHeader
-        title={"Testimonials"}
-        buttonText={"View More"}
-        onClick={() => navigate("/testimonials")}
-        headingDelay="100"
-        buttonDelay="200"
-      >
-        What <span className="text-accent">Clients Say</span>
+    <section className="container border-left border-right flex flex-col items-center text-center py-5">
+      <SectionHeader title="All Testimonials" headingDelay="100">
+        What <span className="text-accent">People Say</span>
       </SectionHeader>
 
-      <div className="w-full grid grid-auto gap-2 py-2">
-        {topThree.map((testimonial, idx) => (
+      {/* Testimonials Grid */}
+      <div className="w-full grid grid-auto gap-3 py-4">
+        {testimonials.map((testimonial, idx) => (
           <TestimonialCard
             key={testimonial.id}
             text={testimonial.quote}
@@ -56,7 +46,7 @@ const Testimonials = () => {
             role={testimonial.role}
             image={testimonial.avatar}
             aos="fade-up"
-            aosDelay={idx * 300}
+            aosDelay={idx * 150}
           />
         ))}
       </div>
@@ -64,4 +54,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default TestimonialsList;

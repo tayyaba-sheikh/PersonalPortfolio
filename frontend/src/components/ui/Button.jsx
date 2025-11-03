@@ -8,6 +8,8 @@ const Button = ({
   variant = "primary", // primary, secondary, danger, etc.
   size = "medium", // small, medium, large
   htmlType = "button", // actual HTML button type
+  aos,
+  aosDelay,
   onClick,
   className = "",
   disabled = false,
@@ -20,6 +22,8 @@ const Button = ({
       onClick={onClick}
       disabled={disabled}
       className={baseClasses.trim()}
+      data-aos={aos}
+      data-aos-delay={aosDelay}
     >
       {icon && <span className="btn-icon">{icon}</span>}
       {children}

@@ -289,3 +289,29 @@
     border-color: var(--clr-accent-400);
     color: var(--clr-accent-400);
 }
+
+@media (max-width: 768px) {
+
+    .btn-small{
+        font-size: .7rem;
+        padding: .4rem 1rem;
+        margin-top: .4rem;
+    }
+
+    .btn-medium{
+        font-size: .9rem;
+        padding: .4rem 1rem;
+        margin-top: .4rem;
+    }
+
+    .btn-large{
+        font-size: 1rem;
+        padding: .4rem 1rem;
+        margin-top: .4rem;
+    }
+
+    .btn-outline{
+        font-size: .8rem;
+        padding: .4rem 1.5rem;
+    }
+}

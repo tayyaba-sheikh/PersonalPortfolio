@@ -15,6 +15,7 @@
 .project-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--clr-secondary-500);
 }
 
 /* Thumbnail */
@@ -82,13 +83,4 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.6rem;
-}
-
-.tag {
-    background: var(--color-accent-light, #e6f0ff);
-    color: var(--color-accent, #007bff);
-    font-size: 0.75rem;
-    padding: 0.25rem 0.6rem;
-    border-radius: 0.4rem;
-    font-weight: 500;
 }

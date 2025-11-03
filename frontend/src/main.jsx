@@ -22,6 +22,8 @@ import './styles/iconBtn.css'
 import './styles/timelineItem.css'
 import './styles/statsCard.css'
 import './styles/projectCard.css'
+import './styles/serviceCard.css'
+import './styles/marquee.css'
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import { ModalProvider } from "./context/ModalContext.jsx";
 

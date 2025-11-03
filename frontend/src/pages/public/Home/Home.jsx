@@ -156,7 +156,7 @@ const Home = () => {
         />
 
         <p
-          className="signature text-accent text-shadow mt-3"
+          className="signature text-5xl text-accent text-shadow mt-3"
           data-aos="fade-up"
           data-aos-delay="200"
         >

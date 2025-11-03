@@ -88,28 +88,54 @@
    SIDENAV / NAVIGATION HELPERS
 ================================= */
 .sidenav-base {
-  padding: 1rem 2rem 1rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+    padding: 1rem 2rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .sidenav-mobile {
-  background: var(--clr-bg-base);
-  border-top: 1px solid var(--clr-border);
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+    background: var(--clr-bg-base);
+    border-top: 1px solid var(--clr-border);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
+
 /* Responsive overrides */
 @media (max-width: 768px) {
-  .sidenav-desktop { display: none; }
-  .sidenav-mobile { display: flex; }
+    .sidenav-desktop {
+        display: none;
+    }
+
+    .sidenav-mobile {
+        display: flex;
+    }
 }
+
 @media (min-width: 769px) {
-  .sidenav-desktop { display: flex; }
-  .sidenav-mobile { display: none; }
+    .sidenav-desktop {
+        display: flex;
+    }
+
+    .sidenav-mobile {
+        display: none;
+    }
+}
+
+/* ====================================== */
+/* testimonial.css */
+.testimonial-card {
+    max-width: 320px;
+    background: var(--clr-bg-subtle);
+    border: 1px solid var(--clr-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--clr-brand-500);
 }

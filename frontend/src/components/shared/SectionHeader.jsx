@@ -5,6 +5,7 @@ const SectionHeader = ({
     title,
     children,
     buttonText,
+    justify = 'center',
     onClick,
     className = "",
     headingAos = "fade-down",       // default AOS animation
@@ -15,7 +16,7 @@ const SectionHeader = ({
     const alignmentClass =
         buttonText && onClick
             ? "justify-between text-left"
-            : "justify-center text-center";
+            : `justify-${justify} text-${justify}`;
 
     return (
         <div
@@ -23,13 +24,13 @@ const SectionHeader = ({
         >
             {/* Title + Subtitle */}
             <div
-                className="wrapper flex flex-col"
+                className={`wrapper flex flex-col`}
                 data-aos={headingAos}
                 data-aos-delay={aosDelay}
             >
                 {title && (
                     <div className="heading-sm heading-inverse">
-                        <span className="text-accent">-</span> {title}
+                        <span className="text-secondary">-</span> {title}
                     </div>
                 )}
                 <div className="heading-lg">{children}</div>

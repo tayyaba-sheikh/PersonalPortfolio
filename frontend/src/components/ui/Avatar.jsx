@@ -6,7 +6,7 @@ const Avatar = ({
     size = "medium",
     shape = "circle",
     className = "",
-    aos,
+    aos = 'fade-up',
     aosDelay,
     aosDuration
 }) => {

@@ -15,7 +15,7 @@
     left: 0;
     width: 260px;
     height: 100vh;
-    background: white;
+    background: var(--clr-bg-base);
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
     border-right: 10px solid var(--clr-brand-500);
@@ -34,7 +34,7 @@
     height: 40px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--clr-accent-600), var(--clr-secondary-500));
-    color: white;
+    color: var(--clr-text-inverse);
     border: none;
     cursor: pointer;
     z-index: 1100;

@@ -15,8 +15,8 @@ import AdminLayout from './layout/AdminLayout.jsx';
 import Index from './pages/public/Home/Index.jsx';
 import ProjectsList from './pages/public/Works/ProjectsList.jsx';
 import ProjectDetail from './pages/public/Works/ProjectDetail.jsx';
-import ServicesDetailList from './pages/public/Services/ServicesDetailList.jsx';
-import TestimonialsDetailList from './pages/public/Testimonials/TestimonialsDetailList.jsx';
+import ServicesList from './pages/public/Services/ServicesList.jsx';
+import TestimonialsList from './pages/public/Testimonials/TestimonialsList.jsx';
 
 
 // Admin pages
@@ -57,8 +57,8 @@ function App() {
           <Route index element={<Index />} />
           <Route path="works" element={<ProjectsList />} />
           <Route path="project/:id" element={<ProjectDetail />} />
-          <Route path="services" element={<ServicesDetailList />} />
-          <Route path="testimonials" element={<TestimonialsDetailList />} />
+          <Route path="services" element={<ServicesList />} />
+          <Route path="testimonials" element={<TestimonialsList />} />
         </Route>
         {/* Admin Panel */}
         <Route path="/admin/login" element={<Login />} />

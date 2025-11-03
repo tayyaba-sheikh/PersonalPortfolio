@@ -59,7 +59,7 @@ const SideNav = () => {
     // </div>
     <>
       {/* Desktop Sidebar */}
-      <div className="sidenav-base sidenav-desktop fixed right-0 top-1/2 -translate-y-1/2 rounded-md">
+      <div className="sidenav-base sidenav-desktop fixed right-0 top-1/2 -translate-y-1/2 rounded-md md:hide">
         <nav className="flex flex-col gap-3">
           {sections.map((sec) => (
             <button

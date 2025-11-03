@@ -54,13 +54,6 @@ a { text-decoration: none; color: inherit; }
   max-width: 1024px;
 }
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-lg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
 /* ------------------------------
    Width & Height
 --------------------------------- */
@@ -390,6 +383,12 @@ a { text-decoration: none; color: inherit; }
   .lg\:hidden { display: none !important; }
   .lg\:flex { display: flex !important; }
   .lg\:flex-col { flex-direction: column !important; }
+  .lg\:justify-center { justify-content: center; }
+  .lg\:justify-between{ justify-content: space-between; }
+  .lg\:justify-around { justify-content: space-around; }
+  .lg\:items-center { align-items: center; }
+  .lg\:items-start { align-items: start; }
+  .lg\:items-end    { align-items: flex-end; }
   .lg\:w-full { width: 100% !important; }
   .lg\:text-center { text-align: center !important; }
 
@@ -535,6 +534,12 @@ a { text-decoration: none; color: inherit; }
   .md\:hidden { display: none !important; }
   .md\:flex { display: flex !important; }
   .md\:flex-col { flex-direction: column !important; }
+  .md\:justify-center { justify-content: center; }
+  .md\:justify-between{ justify-content: space-between; }
+  .md\:justify-around { justify-content: space-around; }
+  .md\:items-center { align-items: center; }
+  .md\:items-start { align-items: start; }
+  .md\:items-end    { align-items: flex-end; }
   .md\:w-full { width: 100% !important; }
   .md\:text-center { text-align: center !important; }
 
@@ -678,6 +683,12 @@ a { text-decoration: none; color: inherit; }
   .sm\:hidden { display: none !important; }
   .sm\:flex { display: flex !important; }
   .sm\:flex-col { flex-direction: column !important; }
+  .sm\:justify-center { justify-content: center; }
+  .sm\:justify-between{ justify-content: space-between; }
+  .sm\:justify-around { justify-content: space-around; }
+  .sm\:items-center { align-items: center; }
+  .sm\:items-start { align-items: start; }
+  .sm\:items-end    { align-items: flex-end; }
   .sm\:w-full { width: 100% !important; }
   .sm\:text-center { text-align: center !important; }
 
